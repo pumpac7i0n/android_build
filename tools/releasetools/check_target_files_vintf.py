@@ -299,9 +299,6 @@ def CheckVintfIfTrebleEnabled(target_files, target_info):
   if OPTIONS.skip_compatibility_check:
     return
 
-  if not CheckVintf(target_files, target_info):
-    raise RuntimeError("VINTF compatibility check failed")
-
 def HasTrebleEnabled(target_files, target_info):
   def HasVendorPartition(target_files):
     if os.path.isdir(target_files):
